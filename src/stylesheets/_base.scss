@@ -11,3 +11,24 @@
 .projects {
 	height: 75vh;
 }
+
+.hero {
+	button {
+		position: relative;
+		top: 45px;
+		z-index: 1;
+	}
+	&__clip-path {
+		height: 5rem;
+		clip-path: polygon(50% 85%, 0 0, 100% 0);
+		background-color: $theme-dark;
+	}
+}
+
+section, footer {
+	padding: 1rem 2rem;
+
+	p {
+		padding-bottom: 1rem;
+	}
+}

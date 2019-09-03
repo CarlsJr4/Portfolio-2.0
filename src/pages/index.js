@@ -11,12 +11,13 @@ const IndexPage = () => (
     <SEO title="Home" />
 
 		{/* ---------- Intro ---------- */}
-		<section className="content--dark">
+		<section className="content--dark hero">
 			<h1 id="intro__name">Carl Dungca</h1>
 			<p>Front-end developer who loves problem-solving and functional design.</p>
 			<p>HTML5 - CSS3 - JS - SASS - React</p>
 			<LinkButton link="#">Resume</LinkButton>
 		</section>
+		<div className="hero__clip-path"></div>
 
 		{/* ---------- Projects ---------- */}
 		<section className="content--light projects">
