@@ -4,6 +4,12 @@ button {
 	background: $theme-accent;
 	border-radius: 5px;
 	padding: 0.5rem 1rem;
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(.7,-0.83,.43,1.74);
+
+	&:hover {
+		transform: scale(1.2);
+	}
 }
 
 footer button {
