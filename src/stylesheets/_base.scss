@@ -1,5 +1,13 @@
-section, footer {
-		h1 {
-			position: relative;
-		}
+.content {
+	&--dark {
+		background-color: $theme-dark;
+		color: white;
+	}
+	&--light {
+		color: $theme-dark;
+	}
+} 
+
+.projects {
+	height: 75vh;
 }

@@ -11,7 +11,7 @@ const IndexPage = () => (
     <SEO title="Home" />
 
 		{/* ---------- Intro ---------- */}
-		<section className="content--black">
+		<section className="content--dark">
 			<h1 id="intro__name">Carl Dungca</h1>
 			<p>Front-end developer who loves problem-solving and functional design.</p>
 			<p>HTML5 - CSS3 - JS - SASS - React</p>
@@ -19,7 +19,7 @@ const IndexPage = () => (
 		</section>
 
 		{/* ---------- Projects ---------- */}
-		<section className="content--white">
+		<section className="content--light projects">
 			<h1>Projects</h1>
 		</section>
 
