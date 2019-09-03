@@ -4,6 +4,19 @@
 	text-transform: uppercase;
 }
 
+section, footer {
+	h1::after {
+		content: "";
+		background: $theme-accent;
+		height: 5px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 25%;
+		bottom: -15px;
+	}
+}
+
 body {
 	font-family: 'Muli', sans-serif;
 }
