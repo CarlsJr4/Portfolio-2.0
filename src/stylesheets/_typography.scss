@@ -32,3 +32,14 @@ body, h1 {
 p {
 	margin-bottom: 0;
 }
+
+footer a {
+	color: white;
+	&:hover {
+		color: #31D1DC;
+	}
+	i {
+		margin: 0.25rem;
+		font-size: 1.25rem;
+	}
+}

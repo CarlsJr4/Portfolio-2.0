@@ -20,13 +20,13 @@
 	}
 	&__clip-path {
 		height: 5rem;
-		clip-path: polygon(50% 85%, 0 0, 100% 0);
+		clip-path: polygon(50% 95%, 0 0, 100% 0);
 		background-color: $theme-dark;
 	}
 }
 
 section, footer {
-	padding: 1rem 2rem;
+	padding: 2rem;
 
 	p {
 		padding-bottom: 1rem;
