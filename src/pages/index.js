@@ -1,31 +1,75 @@
 import React from "react"
 import LinkButton from "../components/LinkButton"
 import resume from "../assets/resumeFinal.pdf"
+import { graphql } from "gatsby"
 // import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = ({data}) => (
-  <Layout>
-    <SEO title="Home" />
+function IndexPage({data}) {
 
-		{/* ---------- Intro ---------- */}
-		<section className="content--dark hero">
-			<h1 id="intro__name">Carl Dungca</h1>
-			<p>Front-end developer who loves problem-solving and functional design.</p>
-			<p>HTML5 - CSS3 - JS - SASS - React</p>
-			<LinkButton link={resume}>Resume</LinkButton>
-		</section>
-		{/* The triangle shape at the bottom */}
-		<div className="hero__clip-path"></div>
+	const projectData = data.allSanityProject.edges 
 
-		{/* ---------- Projects ---------- */}
-		<section className="content--light projects">
-			<h1>Projects</h1>
-		</section>
+	const projectGrid = projectData.map(({node}) => 
+		<div key={node.id} className="projects__previews">
+			<h3>{node.title}</h3>
+			<p>{node.previewDesc}</p>
+			<LinkButton link={node.repoLink}>Code</LinkButton>
+			<LinkButton link={node.projectLink}>Project</LinkButton>
+			<LinkButton link="#">See More</LinkButton>
+		</div>
+	)
+	
+	return (
+		<Layout>
+			<SEO title="Home" />
+	
+			{/* ---------- Intro ---------- */}
+			<section className="content--dark hero">
+				<h1 id="intro__name">Carl Dungca</h1>
+				<p>Front-end developer who loves problem-solving and functional design.</p>
+				<p>HTML5 - CSS3 - JS - SASS - React</p>
+				<LinkButton link={resume}>Resume</LinkButton>
+			</section>
+			{/* The triangle shape at the bottom */}
+			<div className="hero__clip-path"></div>
+	
+			{/* ---------- Projects ---------- */}
+			<section className="content--light projects">
+				<h1>Projects</h1>
+				<div className="projects">{projectGrid}</div>
+			</section>
+	
+		</Layout>
+	)
+} 
 
-  </Layout>
-)
+export const query = graphql`
+	query {
+		allSanityProject {
+			edges {
+				node {
+					id
+					title
+					slug {
+						current
+					}
+					previewDesc
+					projectLink
+					repoLink
+					screenshot {
+						asset {
+							url
+						}
+					}
+					tool {
+						title
+					}
+				}
+			}
+		}
+	}
+`
 
 export default IndexPage
