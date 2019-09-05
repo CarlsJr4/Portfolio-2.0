@@ -14,10 +14,13 @@ function IndexPage({data}) {
 	const projectGrid = projectData.map(({node}) => 
 		<div key={node.id} className="projects__previews">
 			<h3>{node.title}</h3>
+			<img src={node.screenshot.asset.url} alt={"image of: " + node.title}/>
 			<p>{node.previewDesc}</p>
-			<LinkButton link={node.repoLink}>Code</LinkButton>
-			<LinkButton link={node.projectLink}>Project</LinkButton>
-			<LinkButton link="#">See More</LinkButton>
+			<div className="projects__buttons">
+				<LinkButton link={node.repoLink}>Code</LinkButton>
+				<LinkButton link={node.projectLink}>Project</LinkButton>
+				<LinkButton link="#">See More</LinkButton>
+			</div>
 		</div>
 	)
 	
@@ -38,7 +41,9 @@ function IndexPage({data}) {
 			{/* ---------- Projects ---------- */}
 			<section className="content--light projects">
 				<h1>Projects</h1>
-				<div className="projects">{projectGrid}</div>
+				<div className="projects__container">
+					{projectGrid}
+				</div>
 			</section>
 	
 		</Layout>

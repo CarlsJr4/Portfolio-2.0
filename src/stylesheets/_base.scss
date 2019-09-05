@@ -9,7 +9,17 @@
 } 
 
 .projects {
-	height: 75vh;
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	}
+	&__buttons {
+		display: flex;
+
+		button {
+			margin-right: 0.5rem;
+		}
+	}
 }
 
 .hero {
