@@ -18,8 +18,11 @@
 		top: 45px;
 		z-index: 1;
 	}
+	// The triangle at the bottom of the header
 	&__clip-path {
 		height: 5rem;
+		position: relative;
+		bottom: 1px;
 		clip-path: polygon(50% 99%, 0 0, 100% 0);
 		background-color: $theme-dark;
 	}
