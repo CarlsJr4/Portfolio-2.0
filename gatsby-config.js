@@ -13,7 +13,14 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
-    },
+		},
+		{
+			resolve: `gatsby-source-sanity`,
+			options: {
+				projectId: 'nof1t6y8',
+				dataset: 'projects'
+			}
+		},
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
