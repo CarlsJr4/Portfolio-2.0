@@ -2,7 +2,7 @@ import React from 'react';
 
 const LinkButton = ({link, children}) => {
 	return (
-		<a href={link} target="_blank">
+		<a href={link}>
 			<button>
 				{children}
 			</button>

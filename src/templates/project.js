@@ -1,7 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Linkbutton from '../components/LinkButton'
+import Navbar from '../components/Navbar'
+import LinkButton from '../components/LinkButton'
 import { graphql } from 'gatsby'
 
 
@@ -11,11 +12,14 @@ const project = ({ data }) => {
 
 	return (
 		<Layout>
+			<Navbar />
 			<SEO title="project" />
 			<section>
 				<img src={data.sanityProject.screenshot.asset.url} alt={'image of ' + data.sanityProject.title}/>
 				<h1>{data.sanityProject.title}</h1>
 				<p>{toolString}</p>
+				<LinkButton link={data.sanityProject.repoLink}>Code</LinkButton>
+				<LinkButton link={data.sanityProject.projectLink}>Project</LinkButton>
 			</section>
 		</Layout>
 	);
@@ -26,6 +30,8 @@ export const query = graphql`
 	query($title: String!) {
 		sanityProject(title: {eq: $title}) {
 			title
+			projectLink
+			repoLink
 			tool {
 				title
 			}
