@@ -9,7 +9,7 @@
 } 
 
 .projects {
-	margin: auto 15%;
+	margin: auto 10%;
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -47,5 +47,14 @@ section, footer {
 
 	p {
 		padding-bottom: 1rem;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.projects {
+		margin: auto 8%;
+		&__container {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 }
