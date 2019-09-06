@@ -9,9 +9,13 @@
 } 
 
 .projects {
+	margin: auto 15%;
 	&__container {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+		grid-template-columns: repeat(2, 1fr);
+		img {
+			width: 100%;
+		}
 	}
 	&__buttons {
 		display: flex;
