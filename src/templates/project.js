@@ -9,14 +9,18 @@ const project = ({ data }) => {
 		<Layout>
 			<SEO title="project" />
 			<section>
-				<h1>This is a project</h1>
+				<h1>{data.sanityProject.title}</h1>
 			</section>
 		</Layout>
 	);
 }
 
-// export const query = graphql`
-// 	query
-// `
+export const query = graphql`
+	query($title: String!) {
+		sanityProject(title: {eq: $title}) {
+			title
+		}
+	}
+`
 
 export default project;

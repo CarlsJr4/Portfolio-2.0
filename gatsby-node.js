@@ -38,11 +38,15 @@ exports.createPages = async ({ graphql, actions }) => {
 	const projects = result.data.allSanityProject.edges || []
 
 	// For each project, generate a slug from the data and create a page using path, component, and variables
+	// Then, pass in the project data to each page
 	projects.forEach(({node}) => {
 		createPage({
+			// Create a path name
 			path: `/projects/${node.slug.current}`,
+			// Assign page to a template
 			component: require.resolve('./src/templates/project.js'),
-			context: {slug: node.slug},
+			// Pass in data to page
+			context: {title: node.title},
 		})
 	})
 }
