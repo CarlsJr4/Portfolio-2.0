@@ -3,6 +3,7 @@ import LinkButton from "../components/LinkButton"
 import resume from "../assets/resumeFinal.pdf"
 import { graphql } from "gatsby"
 // import { Link } from "gatsby"
+import Image from "../components/image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -19,7 +20,7 @@ function IndexPage({data}) {
 			<div className="projects__buttons">
 				<LinkButton link={node.repoLink}>Code</LinkButton>
 				<LinkButton link={node.projectLink}>Project</LinkButton>
-				<LinkButton link="#">See More</LinkButton>
+				<LinkButton link={'/projects/' + node.slug.current}>See More</LinkButton>
 			</div>
 		</div>
 	)
