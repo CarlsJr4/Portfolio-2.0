@@ -2,8 +2,7 @@ import React from "react"
 import LinkButton from "../components/LinkButton"
 import resume from "../assets/resumeFinal.pdf"
 import { graphql } from "gatsby"
-// import { Link } from "gatsby"
-import Image from "../components/image"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,19 +11,23 @@ function IndexPage({data}) {
 
 	const projectData = data.allSanityProject.edges 
 
-	const projectGrid = projectData.map(({node}) => 
-		<div key={node.id} className="projects__previews">
-			<img src={node.screenshot.asset.url} alt={"image of: " + node.title}/>
-			<div className="projects__overlay">
-				<h3>{node.title}</h3>
-				<p>{node.previewDesc}</p>
-			</div>
-			{/* <div className="projects__buttons">
-				<LinkButton link={node.repoLink}>Code</LinkButton>
-				<LinkButton link={node.projectLink}>Project</LinkButton>
-				<LinkButton link={'/projects/' + node.slug.current}>See More</LinkButton>
-			</div> */}
-		</div>
+	const projectGrid = projectData.map(({node}) => { 
+		const tools = node.tool;
+		const toolString = tools.map(tool => tool.title).join(" - ")
+
+		return (
+					<Link to={'/projects/' + node.slug.current}>
+					<div key={node.id} className="projects__previews">
+						<img src={node.screenshot.asset.url} alt={"image of: " + node.title}/>
+						<div className="projects__overlay">
+							<h3>{node.title}</h3>
+							<p>{toolString}</p>
+							<p>{node.previewDesc}</p>
+						</div>
+					</div>
+				</Link>
+			)
+		}
 	)
 	
 	return (
@@ -64,8 +67,6 @@ export const query = graphql`
 						current
 					}
 					previewDesc
-					projectLink
-					repoLink
 					screenshot {
 						asset {
 							url

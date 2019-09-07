@@ -9,7 +9,7 @@ import { graphql } from 'gatsby'
 
 const project = ({ data }) => {
 	const tools = data.sanityProject.tool
-	const toolString = tools.map( tool => tool.title).join(" - ")
+	const toolString = tools.map(tool => tool.title).join(" - ")
 
 	return (
 		<Layout>
