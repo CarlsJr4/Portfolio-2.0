@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Navbar from '../components/Navbar'
 import LinkButton from '../components/LinkButton'
+import BlockContent from '@sanity/block-content-to-react'
 import { graphql } from 'gatsby'
 
 
@@ -20,6 +21,7 @@ const project = ({ data }) => {
 				<p>{toolString}</p>
 				<LinkButton link={data.sanityProject.repoLink}>Code</LinkButton>
 				<LinkButton link={data.sanityProject.projectLink}>Project</LinkButton>
+				<BlockContent blocks={data.sanityProject._rawMainDesc}/>
 			</section>
 		</Layout>
 	);
@@ -32,6 +34,7 @@ export const query = graphql`
 			title
 			projectLink
 			repoLink
+			_rawMainDesc
 			tool {
 				title
 			}
