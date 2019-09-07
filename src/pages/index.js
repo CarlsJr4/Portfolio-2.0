@@ -14,14 +14,16 @@ function IndexPage({data}) {
 
 	const projectGrid = projectData.map(({node}) => 
 		<div key={node.id} className="projects__previews">
-			<h3>{node.title}</h3>
 			<img src={node.screenshot.asset.url} alt={"image of: " + node.title}/>
-			<p>{node.previewDesc}</p>
-			<div className="projects__buttons">
+			<div className="projects__overlay">
+				<h3>{node.title}</h3>
+				<p>{node.previewDesc}</p>
+			</div>
+			{/* <div className="projects__buttons">
 				<LinkButton link={node.repoLink}>Code</LinkButton>
 				<LinkButton link={node.projectLink}>Project</LinkButton>
 				<LinkButton link={'/projects/' + node.slug.current}>See More</LinkButton>
-			</div>
+			</div> */}
 		</div>
 	)
 	
