@@ -88,25 +88,44 @@ section, footer {
 			background: $theme-accent;
 			height: 5px;
 			position: absolute;
-			max-width: 150px;
+			min-width: 100px;
+			max-width: 130px;
 			width: 25%;
 			bottom: -15px;
 		}
 	}
 }
 
+
+// Project information subpage starts here
 .information {
 	text-align: left;
 	margin: auto 25%;
+	// img {
+	// width: 10%;
+	// }
 	// NOTE: This line is here so that the 2 buttons in the project descriptions don't touch
 	a + a {
 		margin-left: 10px;
 	}
 	h1 {
 		align-items: flex-start;
+		text-align: left;
 	}
 	&__content {
 		margin: 2rem auto;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.information {
+		margin: 0 !important;
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	.information {
+		margin: auto 12%;
 	}
 }
 
