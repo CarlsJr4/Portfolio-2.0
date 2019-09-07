@@ -9,7 +9,7 @@
 } 
 
 .projects {
-	margin: auto 10%;
+	margin: auto 20%;
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -72,7 +72,7 @@ section, footer {
 
 .information {
 	text-align: left;
-	margin: auto 15%;
+	margin: auto 25%;
 	// NOTE: This line is here so that the 2 buttons in the project descriptions don't touch
 	a + a {
 		margin-left: 10px;

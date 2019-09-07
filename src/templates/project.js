@@ -16,7 +16,9 @@ const project = ({ data }) => {
 			<Navbar />
 			<SEO title="project" />
 			<section className="information">
-				<img src={data.sanityProject.screenshot.asset.url} alt={'image of ' + data.sanityProject.title}/>
+				<a href={data.sanityProject.projectLink}>
+					<img src={data.sanityProject.screenshot.asset.url} alt={'image of ' + data.sanityProject.title}/>
+				</a>
 				<h1>{data.sanityProject.title}</h1>
 				<p>{toolString}</p>
 				<LinkButton link={data.sanityProject.repoLink}>Code</LinkButton>
