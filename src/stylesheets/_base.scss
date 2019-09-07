@@ -50,6 +50,41 @@ section, footer {
 	}
 }
 
+section, footer {
+	// h1 is styled this way to control position of underlines
+	h1 {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// The heading underlines
+		&::after {
+			content: "";
+			background: $theme-accent;
+			height: 5px;
+			position: absolute;
+			max-width: 150px;
+			width: 25%;
+			bottom: -15px;
+		}
+	}
+}
+
+.information {
+	text-align: left;
+	margin: auto 15%;
+	// NOTE: This line is here so that the 2 buttons in the project descriptions don't touch
+	a + a {
+		margin-left: 10px;
+	}
+	h1 {
+		align-items: flex-start;
+	}
+	&__content {
+		margin: 2rem auto;
+	}
+}
+
 @media only screen and (max-width: 1200px) {
 	.projects {
 		margin: auto 8%;

@@ -15,13 +15,15 @@ const project = ({ data }) => {
 		<Layout>
 			<Navbar />
 			<SEO title="project" />
-			<section>
+			<section className="information">
 				<img src={data.sanityProject.screenshot.asset.url} alt={'image of ' + data.sanityProject.title}/>
 				<h1>{data.sanityProject.title}</h1>
 				<p>{toolString}</p>
 				<LinkButton link={data.sanityProject.repoLink}>Code</LinkButton>
 				<LinkButton link={data.sanityProject.projectLink}>Project</LinkButton>
-				<BlockContent blocks={data.sanityProject._rawMainDesc}/>
+				<div className="information__content">
+					<BlockContent blocks={data.sanityProject._rawMainDesc}/>
+				</div>
 			</section>
 		</Layout>
 	);
