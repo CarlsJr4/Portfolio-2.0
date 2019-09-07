@@ -14,7 +14,7 @@ const project = ({ data }) => {
 	return (
 		<Layout>
 			<Navbar />
-			<SEO title="project" />
+			<SEO title={data.sanityProject.title} />
 			<section className="information">
 				<a href={data.sanityProject.projectLink}>
 					<img src={data.sanityProject.screenshot.asset.url} alt={'image of ' + data.sanityProject.title}/>
