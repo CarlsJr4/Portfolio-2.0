@@ -36,7 +36,7 @@ function IndexPage({data}) {
 	
 			{/* ---------- Intro ---------- */}
 			<section className="content--dark hero">
-				<h1 id="intro__name">Carl Dungca</h1>
+				<h1 style={{fontSize: "3.5rem"}} id="intro__name">Carl Dungca</h1>
 				<p>Front-end developer who loves problem-solving and functional design.</p>
 				<p>HTML5 - CSS3 - JS - SASS - React</p>
 				<LinkButton link={resume}>Resume</LinkButton>
