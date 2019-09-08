@@ -39,6 +39,10 @@ function IndexPage({data}) {
 				<h1 style={{fontSize: "3.5rem"}} id="intro__name">Carl Dungca</h1>
 				<p>Front-end developer who loves problem-solving and functional design.</p>
 				<p>HTML5 - CSS3 - JS - SASS - React</p>
+				<div>
+					<a href="https://github.com/CarlsJr4" target="_blank"><i className="fab fa-github"></i></a>
+					<a href="https://www.linkedin.com/in/carl-dungca-a81322149/" target="_blank"><i className="fab fa-linkedin"></i></a>
+				</div>
 				<LinkButton link={resume}>Resume</LinkButton>
 			</section>
 			{/* The triangle shape at the bottom */}

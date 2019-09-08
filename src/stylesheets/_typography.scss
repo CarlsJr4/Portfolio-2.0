@@ -13,10 +13,19 @@ p {
 	margin-bottom: 0;
 }
 
-footer a {
+footer a, .hero a {
 	color: white;
-	&:hover {
-		color: #31D1DC;
+	.fab {
+		font-size: 1.5rem;
+		padding: 0.75rem;
+		margin: 0 0.5rem;
+		border-radius: 100%;
+		background: $theme-accent;
+		transition: 200ms;
+		transition-timing-function: cubic-bezier(.7,-0.83,.43,1.74);
+		&:hover {
+			transform: scale(1.15);
+		}
 	}
 	i {
 		margin: 0.25rem;
