@@ -107,10 +107,7 @@ section, footer {
 // Project information subpage starts here
 .information {
 	text-align: left;
-	margin: auto 25%;
-	// img {
-	// width: 10%;
-	// }
+	margin: 65px 25% auto;
 	// NOTE: This line is here so that the 2 buttons in the project descriptions don't touch
 	a + a {
 		margin-left: 10px;
@@ -126,13 +123,13 @@ section, footer {
 
 @media only screen and (max-width: 500px) {
 	.information {
-		margin: 0 !important;
+		margin: 65px 0 0 !important;
 	}
 }
 
 @media only screen and (max-width: 1300px) {
 	.information {
-		margin: auto 12%;
+		margin: 65px 12% auto;
 	}
 }
 
