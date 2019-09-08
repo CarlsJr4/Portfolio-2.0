@@ -62,7 +62,7 @@ function IndexPage({data}) {
 
 export const query = graphql`
 	query {
-		allSanityProject {
+		allSanityProject(sort: {fields: priority}) {
 			edges {
 				node {
 					id
