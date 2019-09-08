@@ -22,6 +22,15 @@
 
 	&__previews {
 		position: relative;
+		overflow: hidden;
+		img {
+			transition: ease-out 100ms;
+		}
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
 	}
 
 	&__overlay {
