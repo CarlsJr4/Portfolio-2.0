@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Carl Dungca - Portfolio`,
-    description: `A website containing all projects created by front-end developer Carl Dungca.`,
+    description: `Carl Dungca's web developer projects.`,
     author: `Carl Dungca`,
   },
   plugins: [

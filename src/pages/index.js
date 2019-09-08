@@ -17,7 +17,7 @@ function IndexPage({data}) {
 		const toolString = tools.map(tool => tool.title).join(" - ")
 
 		return (
-					<Link to={'/projects/' + node.slug.current}>
+					<Link to={'/projects/' + node.slug.current} key={node.id}>
 					<div key={node.id} className="projects__previews">
 						<img src={node.screenshot.asset.url} alt={"image of: " + node.title}/>
 						<div className="projects__overlay">
