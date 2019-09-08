@@ -1,5 +1,6 @@
 import React from "react"
 import LinkButton from "../components/LinkButton"
+import Social from "../components/Social"
 import resume from "../assets/resumeFinal.pdf"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
@@ -40,8 +41,7 @@ function IndexPage({data}) {
 				<p>Front-end developer who loves problem-solving and functional design.</p>
 				<p>HTML5 - CSS3 - JS - SASS - React</p>
 				<div>
-					<a href="https://github.com/CarlsJr4" target="_blank"><i className="fab fa-github"></i></a>
-					<a href="https://www.linkedin.com/in/carl-dungca-a81322149/" target="_blank"><i className="fab fa-linkedin"></i></a>
+					<Social />
 				</div>
 				<LinkButton link={resume}>Resume</LinkButton>
 			</section>
