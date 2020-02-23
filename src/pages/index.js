@@ -1,7 +1,7 @@
 import React from "react"
 import LinkButton from "../components/LinkButton"
 import Social from "../components/Social"
-import resume from "../assets/resumeFinal.pdf"
+import resume from "../assets/resumeFinalv2.pdf"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
