@@ -1,7 +1,7 @@
 import React from 'react'
 import LinkButton from "./LinkButton"
 import Social from "./Social"
-import resume from "../assets/resumeFinal.pdf"
+import resume from "../assets/resumeFinalv2.pdf"
 
 const Footer = () => {
 	return (
