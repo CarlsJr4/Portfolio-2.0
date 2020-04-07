@@ -39,7 +39,7 @@ function IndexPage({data}) {
 			<section className="content--dark hero">
 				<h1 style={{fontSize: "3.5rem"}} id="intro__name">Carl Dungca</h1>
 				<h3>I write software because I love turning ideas into real working products.</h3>
-				<p>HTML5 - CSS3 - SCSS - JavaScript - jQuery - NodeJS - NPM - React</p>
+				<p>HTML5 - CSS3 - SASS - JavaScript - Express - Node - React - Redux - MongoDB</p>
 				<div>
 					<Social />
 				</div>
