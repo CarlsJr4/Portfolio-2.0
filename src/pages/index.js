@@ -1,7 +1,7 @@
 import React from "react"
 import LinkButton from "../components/LinkButton"
 import Social from "../components/Social"
-import resume from "../assets/resumeFinal.pdf"
+import resume from "../assets/resumeFinalv2.pdf"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
@@ -38,8 +38,8 @@ function IndexPage({data}) {
 			{/* ---------- Intro ---------- */}
 			<section className="content--dark hero">
 				<h1 style={{fontSize: "3.5rem"}} id="intro__name">Carl Dungca</h1>
-				<p>Front-end developer who loves problem-solving and functional design.</p>
-				<p>HTML5 - CSS3 - JS - SASS - React</p>
+				<h3>I write software because I love turning ideas into real working products.</h3>
+				<p>HTML5 - CSS3 - SASS - JavaScript - Express - Node - React - Redux - MongoDB</p>
 				<div>
 					<Social />
 				</div>
