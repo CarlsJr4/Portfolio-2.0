@@ -45,7 +45,7 @@ function IndexPage({ data }) {
           I write software because I love turning ideas into real working
           products.
         </h3>
-        <p>React - TypeScript - NextJS - SCSS - Git</p>
+        <p>React - TypeScript - NextJS - SCSS - TailwindCSS - Git</p>
         <div>
           <Social />
         </div>
