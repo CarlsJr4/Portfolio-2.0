@@ -41,10 +41,7 @@ function IndexPage({ data }) {
         <h1 style={{ fontSize: "3.5rem" }} id="intro__name">
           Carl Dungca
         </h1>
-        <h3>
-          I write software because I love turning ideas into real working
-          products.
-        </h3>
+        <h3>Front-End Developer</h3>
         <p>React - TypeScript - NextJS - SCSS - TailwindCSS - Git</p>
         <div>
           <Social />
