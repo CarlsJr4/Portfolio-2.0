@@ -41,7 +41,10 @@ function IndexPage({ data }) {
         <h1 style={{ fontSize: "3.5rem" }} id="intro__name">
           Carl Dungca
         </h1>
-        <h3>Front-End Developer</h3>
+        <h3>
+          Front-end developer specializing in JavaScript-based frameworks and
+          technologies
+        </h3>
         <p>React - TypeScript - NextJS - SCSS - TailwindCSS - Git</p>
         <div>
           <Social />
