@@ -15,6 +15,7 @@
 		display: grid;
 		margin-top: 5%;
 		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
 		img {
 			width: 100%;
 		}
